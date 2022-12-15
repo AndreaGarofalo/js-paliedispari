@@ -13,14 +13,15 @@ console.log("JS OK");
 // 4 creo una funzione che generi un numero casuale
 // 5 sommo i due numeri
 // 6 controllo che il risultato sia dispari o meno
-// 7 dichiaro chi ha vinto
+// 7 confronto se il risultato di pari o dispari corrisponda alla scelta dell'utente
+// 8 dichiaro chi ha vinto
 
 // 1 prendo gli elementi dal dom
 const form = document.getElementById("form");
 const select = document.getElementById("select");
 const option = document.querySelectorAll("option");
 const number = document.getElementById("number");
-const tagetElement = document.getElementById("taget");
+const targetElement = document.getElementById("target");
 const button = document.getElementById("button");
 
 // 2 creo una funzione che reagisce al click del bottone
@@ -49,11 +50,22 @@ form.addEventListener("submit", function (e) {
   // 6 controllo che il risultato sia dispari o meno
   function isOdd(number) {
     if (number % 2 === 0) {
-      return (isOdd = false);
+      return (isOdd = "even");
     } else if (number % 2) {
-      return (isOdd = true);
+      return (isOdd = "odd");
     }
   }
   const oddOrPair = isOdd(result);
   console.log(oddOrPair);
+  // 7 confronto se il risultato di pari o dispari corrisponda alla scelta dell'utente
+  let message;
+
+  if (oddOrPair === userChoice) {
+    message = "Hai vinto!";
+  } else {
+    message = "Ha vinto il PC!";
+  }
+
+  // 8 dichiaro chi ha vinto
+  targetElement.innerText = `Il pc ha fatto ${pcNumber}. La somma è ${result}. ${message}`;
 });
