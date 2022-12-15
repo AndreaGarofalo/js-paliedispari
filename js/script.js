@@ -6,5 +6,11 @@ console.log("JS OK");
 
 // 1 prendo gli elementi dal DOM
 // 2 raccolgo le risposte dell'utente in variabili
-// 3 creo una funzione in cui inverto la posizione delle lettere della parola
-// 4 confronto la parola prima e dopo l'inversione delle lettere
+// 3 creo una funzione che prende il click del button
+// 4 creo una funzione in cui inverto la posizione delle lettere della parola
+// 5 confronto la parola prima e dopo l'inversione delle lettere
+
+// 1 prendo gli elementi dal DOM
+const targetElement = document.getElementById("target");
+const word = document.getElementById("word");
+const button = document.getElementById("button");
