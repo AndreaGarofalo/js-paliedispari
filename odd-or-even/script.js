@@ -10,7 +10,27 @@ console.log("JS OK");
 // 1 prendo gli elementi dal dom
 // 2 creo una funzione che reagisce al click del bottone
 // 3 registo le scelte dell'utente in variabili
-// 4 creo una funzione che mi generi un numero casuale
+// 4 creo una funzione che generi un numero casuale
 // 5 sommo i due numeri
 // 6 controllo che il risultato sia dispari o meno
 // 7 dichiaro chi ha vinto
+
+// 1 prendo gli elementi dal dom
+const form = document.getElementById("form");
+const select = document.getElementById("select");
+const option = document.querySelectorAll("option");
+const number = document.getElementById("number");
+const tagetElement = document.getElementById("taget");
+const button = document.getElementById("button");
+
+// 2 creo una funzione che reagisce al click del bottone
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // 3 registo le scelte dell'utente in variabili
+  const userChoice = select.options[select.selectedIndex].value;
+  const userNumber = number.value;
+
+  console.log(userChoice, userNumber);
+  // 4 creo una funzione che generi un numero casuale
+});
