@@ -47,4 +47,13 @@ form.addEventListener("submit", function (e) {
   console.log(result);
 
   // 6 controllo che il risultato sia dispari o meno
+  function isOdd(number) {
+    if (number % 2 === 0) {
+      return (isOdd = false);
+    } else if (number % 2) {
+      return (isOdd = true);
+    }
+  }
+  const oddOrPair = isOdd(result);
+  console.log(oddOrPair);
 });
