@@ -37,4 +37,12 @@ form.addEventListener("submit", function (e) {
   }
   const reversedWord = reverseWord(word);
   console.log(reversedWord);
+
+  // 5 confronto la parola prima e dopo l'inversione delle lettere
+  let isPalindrome = `La parola ${word} non è palindroma`;
+  if (reversedWord === word) {
+    isPalindrome = `La parola ${word} non è palindroma`;
+  }
+  console.log(isPalindrome);
+  targetElement.innerText = isPalindrome;
 });
