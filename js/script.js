@@ -23,6 +23,18 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // 3 raccolgo le risposte dell'utente in variabili
-  const userWord = wordField.value.trim();
-  console.log(userWord);
+  const word = wordField.value.trim();
+  console.log(word);
+
+  // 4 creo una funzione in cui inverto la posizione delle lettere della parola
+  function reverseWord(word) {
+    let result = "";
+
+    for (let i = word.length - 1; i >= 0; i--) {
+      result += word[i];
+    }
+    return result;
+  }
+  const reversedWord = reverseWord(word);
+  console.log(reversedWord);
 });
