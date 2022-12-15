@@ -32,5 +32,19 @@ form.addEventListener("submit", function (e) {
   const userNumber = number.value;
 
   console.log(userChoice, userNumber);
+
   // 4 creo una funzione che generi un numero casuale
+  function getRandomNumber(min, max) {
+    max++;
+    const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+    return randomNumber;
+  }
+  const pcNumber = getRandomNumber(1, 5);
+  console.log(pcNumber);
+
+  // 5 sommo i due numeri
+  const result = parseInt(userNumber) + pcNumber;
+  console.log(result);
+
+  // 6 controllo che il risultato sia dispari o meno
 });
