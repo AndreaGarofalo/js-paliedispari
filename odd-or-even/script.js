@@ -29,7 +29,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // 3 registo le scelte dell'utente in variabili
-  const userChoice = select.options[select.selectedIndex].value;
+  const userChoice = select.value;
   const userNumber = number.value;
 
   console.log(userChoice, userNumber);
@@ -50,9 +50,9 @@ form.addEventListener("submit", function (e) {
   // 6 controllo che il risultato sia dispari o meno
   function isOdd(number) {
     if (number % 2 === 0) {
-      return (isOdd = "even");
+      return "even";
     } else if (number % 2) {
-      return (isOdd = "odd");
+      return "odd";
     }
   }
   const oddOrPair = isOdd(result);
